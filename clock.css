@@ -1,0 +1,65 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  
+}
+body{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+.container
+{
+  position: relative;
+}
+.clock
+{
+  width:400px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border:5px solid #c0b9b9;
+  box-shadow: 0px 0px 20px rgb(54, 54, 54);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock span
+{
+  position: absolute;
+  transform: rotate(calc(30deg*var(--i)));
+  inset: 12px;
+  text-align: center;
+  color:#212121;
+}
+.clock span b{
+  transform: rotate(calc(-30deg*var(--i)));
+  display:inline-block;
+  font-size: 20px;
+}
+ .clock::before{
+  content:'';
+  position: absolute;
+  width:8px;
+  height: 8px;
+  background-color: black;
+  border-radius: 50%;
+  z-index: 2;
+ }
+ .hand{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+ }
+ .hand i{
+  position: absolute;
+  background-color:var(--clr);
+  width:4px;
+  height:var(--h);
+  border-radius: 8px;
+ }
